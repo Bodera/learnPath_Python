@@ -22,8 +22,17 @@ Para distribuciones Linux y UNIX, hay un paquete nativo de Python.
 Entonces bastar ejecutar en algún terminal
 
 #### Si Python no se ha agregado a $PATH:
+Windows:
 ```bash
-$>
+$> set path=%path%;C:\python37
+```
+NIX-like:
+```bash
+$> 
+```
+macOS:
+```bash
+$> 
 ```
 #### Si Python se ha agregado a $ PATH:
 ```bash
