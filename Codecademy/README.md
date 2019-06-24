@@ -1,4 +1,4 @@
-# Learn Python 2 crash Codecademy
+# Learn Python 2 [crash Codecademy]https://www.codecademy.com/learn/learn-python)
 
 ## Sintaxis
 * 1.1
