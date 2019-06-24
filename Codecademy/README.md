@@ -116,7 +116,7 @@ print(float_cucumbers_per_person)
 
 * 1.11
 ```python
-# encoding: utf-8
+#encoding: utf-8
 haiku = """Você pode crer
 O pior cego
 É o que quer ver."""
@@ -222,7 +222,73 @@ numbered 0 to 5, as shown below:
 So if you wanted "Y", you could just type
 "PYTHON"[1] (always start counting from 0!)
 """
-fifth_letter = "MONTY"
 
-print fifth_letter[4]
+word = "MONTY"
+fifth_letter = word[4]
+
+print fifth_letter
+```
+
+* 2.5
+```python
+parrot = "Norwegian Blue"
+print( len(parrot)) # Comience a contar desde 1. Los espacios en blanco también cuentan.
+```
+
+* 2.6
+```python
+parrot = "Norwegian Blue"
+print( parrot.lower()) # Or "Norwegian Blue".lower()
+```
+
+* 2.7
+```python
+parrot = "Norwegian Blue"
+print( parrot.upper())
+```
+
+* 2.8
+```python
+pi = 3.14159265359
+print( str(pi))
+```
+
+* 2.9
+```python
+
+```
+
+* 2.10
+```python
+
+```
+
+* 2.11
+```python
+
+```
+
+* 2.12
+```python
+
+```
+
+* 2.13
+```python
+
+```
+
+* 2.14
+```python
+
+```
+
+* 2.15
+```python
+
+```
+
+* 2.16
+```python
+
 ```
