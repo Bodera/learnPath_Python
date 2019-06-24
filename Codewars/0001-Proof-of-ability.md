@@ -10,4 +10,4 @@ def multiplicarse(a, b)
 	return a * b
 ```
 
-Aprenda más leyendo este [artículo] (https://book.mql4.com/operators/function)
+Aprenda más leyendo este [artículo](https://book.mql4.com/operators/function).
