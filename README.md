@@ -8,14 +8,14 @@ El propósito de este repositorio es almacenar códigos a lo largo de mi formaci
 La branch `master` se actualiza semanalmente, la sucursal` Bodera-python-dev` se actualiza cada 2-4 días.
 
 #### ¿Dónde está `Bodera-python-dev`?
-Acceda a la branch `dev` haciendo un clic [aquí] (https://github.com/Bodera/learnPath_Python/tree/Bodera-python-dev).
+Acceda a la branch `dev` haciendo un clic [aquí](https://github.com/Bodera/learnPath_Python/tree/Bodera-python-dev).
 
 ## Detalles del entorno de desarrollo
 Hago uso de una máquina que opera Linux Debian en su versión `stretch` para arquitecturas de` 64 bits`.
 
 * Versión del lenguaje Python
 
-Para aqueles en Windows y macOS navegue hasta [aquí] (https://www.python.org/downloads/) obtenga la versión más reciente y luego ejecute los pasos de instalación provistos.
+Para aqueles en Windows y macOS navegue hasta [aquí](https://www.python.org/downloads/) obtenga la versión más reciente y luego ejecute los pasos de instalación provistos.
 
 Para distribuciones Linux y UNIX, hay un paquete nativo de Python.
 
