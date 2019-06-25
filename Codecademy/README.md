@@ -161,7 +161,7 @@ point_total += exercises_completed * points_per_exercise
 print("Tengo "+str(point_total)+" puntos!")
 ```
 
-## Strings
+## Cadenas
 * 2.1
 ```python
 brian = "Hola vida!"
@@ -255,40 +255,114 @@ print( str(pi))
 
 * 2.9
 ```python
+ministry = "The Ministry of Silly Walks"
 
+print (len(ministry))
+print ministry.upper()
 ```
 
 * 2.10
 ```python
+"""Dile a Python que imprima "Monty Python"
+a la linea de consola 4!"""
 
+print ("Monty Python")
 ```
 
 * 2.11
 ```python
+"""Asigna la cadena "Ping!" a
+la variable the_machine_goes on
+línea 5, luego imprímela en la línea 6!"""
 
+the_machine_goes = "Ping!"
+print (the_machine_goes)
 ```
 
 * 2.12
 ```python
+# Imprima la concatenación de "Spam y huevos" en la línea 3!
 
+print("Spam " + "y " + "huevos")
 ```
 
-* 2.13
+* 2.13 delante
 ```python
+print "El valor de pi está alrededor " + 3.1415
+```
 
+* 2.13 después
+```python
+print "El valor de pi está alrededor " + str(3.1415)
 ```
 
 * 2.14
 ```python
+string_1 = "Camelot"
+string_2 = "lugar"
 
+print "No vamos a %s. Este es un %s tonto." % (string_1, string_2)
+# Salida: No vamos a Camelot. Este es un lugar tonto.
+
+day = 6
+print "03 - %s - 2019" %  (day)
+# 03 - 6 - 2019
+print "03 - %02d - 2019" % (day)
+# 03 - 06 - 2019
 ```
 
-* 2.15
+* 2.15 delante
 ```python
+name = raw_input("¿Cuál es su nombre?")
+quest = raw_input("¿Cuál es tu búsqueda?")
+color = raw_input("¿Cuál es tu color favorito?")
 
+print "Ah, entonces tu nombre es ___, tu búsqueda es ___, " \
+"y tu color favorito es ___." ___ (name, quest, color)
+```
+
+* 2.15 después
+```python
+name = raw_input("¿Cuál es su nombre?")
+quest = raw_input("¿Cuál es tu búsqueda?")
+color = raw_input("¿Cuál es tu color favorito?")
+
+print "Ah, entonces tu nombre es %s, tu búsqueda es %s, " \
+"y tu color favorito es %s." %s (name, quest, color)
 ```
 
 * 2.16
+```python
+# tres formas de crear cadenas
+str_1 = 'Alpha'
+str_2 = "Bravo"
+str_3 = str(3)
+
+# métodos de cadena
+len("Charlie")
+"Delta".upper()
+"Echo".lower()
+
+# imprimiendo una cadena
+print "Foxtrot"
+
+# tecnicas avanzadas de impresion
+g = "Golf"
+h = "Hotel"
+print "%s, %s" % (g, h)
+
+my_string = """El gato,
+sólo el gato
+apareció completo
+y orgulloso:
+nació completamente terminado,
+camina solo y sabe lo que quiere."""
+print ( len(my_string) )
+print (my_string.upper())
+```
+
+## Fecha y hora
+* 3.1
 ```python
 
 ```
