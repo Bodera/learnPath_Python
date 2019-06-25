@@ -364,5 +364,127 @@ print (my_string.upper())
 ## Fecha y hora
 * 3.1
 ```python
+from datetime import datetime
+```
+
+* 3.2
+```python
+from datetime import datetime
+
+now = datetime.now()
+print(now)
+```
+
+* 3.3
+```python
+from datetime import datetime
+
+now = datetime.now()
+
+print(now)
+print(now.year)
+print(now.month)
+print(now.day)
+print(now.hour)
+```
+
+* 3.4
+```python
+from datetime import datetime
+now = datetime.now()
+
+print('%02d/%02d/%04d') % (now.day, now.month, now.year)
+# como resultado tenemos dd-mm-yyyy
+```
+
+* 3.5
+```python
+from datetime import datetime
+now = datetime.now()
+
+print '%02d:%02d:%02d' % (now.hour, now.minute, now.second)
+```
+
+* 3.6
+```python
+from datetime import datetime
+now = datetime.now()
+
+print ('%02d/%02d/%04d' + ' ' '%02d:%02d:%02d') % (now.month, now.day, now.year, now.hour, now.minute, now.second)
+```
+
+## Condiciones y flujo de control
+* 4.1
+```python
+
+```
+
+* 4.2
+```python
+
+```
+
+* 4.3
+```python
+
+```
+
+* 4.4
+```python
+
+```
+
+* 4.5
+```python
+
+```
+
+* 4.6
+```python
+
+```
+
+* 4.7
+```python
+
+```
+
+* 4.8
+```python
+
+```
+
+* 4.9
+```python
+
+```
+
+* 4.10
+```python
+
+```
+
+* 4.11
+```python
+
+```
+
+* 4.12
+```python
+
+```
+
+* 4.13
+```python
+
+```
+
+* 4.14
+```python
+
+```
+
+* 4.15
+```python
 
 ```
