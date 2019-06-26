@@ -1,5 +1,7 @@
 # Learn Python 2 [crash Codecademy](https://www.codecademy.com/learn/learn-python)
 
+__[Debes estudiar chicx](https://docs.python.org/3/)__
+
 ## Sintaxis
 * 1.1
 ```python
@@ -899,4 +901,160 @@ print grade_converter(70)
 
 # Esto debería imprimir un "F"
 print grade_converter(61)
+```
+
+## Mini-Project
+1. Pídale al usuario que ingrese una palabra en inglés.  
+2. Asegúrese de que el usuario ingresó una palabra válida.  
+3. Convierte la palabra del inglés al cerdo latino.  
+4. Muestra el resultado de la traducción.  
+
+* 5.1
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+print("Pig Latin")
+```
+
+* 5.2
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+print("¡Bienvenido al traductor de cerdo latino!")
+
+# ¡Comience a codificar aquí!
+original = raw_input ("Ingrese una palabra en inglés: ")
+```
+
+* 5.3
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+print("¡Bienvenido al traductor de cerdo latino!")
+
+# ¡Comience a codificar aquí!
+original = raw_input ("Ingrese una palabra en inglés: ")
+
+# comprobando entradas válidas
+if len(original) > 0:
+	print(original)
+else:
+	print("vacío")
+```
+
+* 5.4
+¡Puedes usar `.isalpha()` para verificar que una cadena no contenga caracteres que no sean letras!
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+print("¡Bienvenido al traductor de cerdo latino!")
+
+# ¡Comience a codificar aquí!
+original = raw_input ("Ingrese una palabra en inglés: ")
+
+# comprobando entradas válidas
+if len(original) > 0 and original.isalpha():
+	print(original)
+else:
+	print("vacío")
+```
+
+* 5.5
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+pyg = 'ay'
+```
+
+* 5.6
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+pyg = 'ay'
+
+original = raw_input("Ingrese una palabra en inglés: ")
+
+if len(original) > 0 and original.isalpha():
+  print original
+  word = original.lower()
+  first = word[0]
+else:
+  print("vacío")
+```
+
+* 5.7
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+pyg = 'ay'
+
+original = raw_input("Ingrese una palabra en inglés: ")
+
+if len(original) > 0 and original.isalpha():
+  print original
+  word = original.lower()
+  first = word[0]
+  new_word = word + first + pyg
+else:
+  print print("vacío")
+```
+
+* 5.8
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""
+s = "Charlie"
+
+print s[0]
+#"C"
+
+print s[1:4]
+#"har"
+"""
+
+pyg = 'ay'
+
+original = raw_input("Ingrese una palabra en inglés: ")
+
+if len(original) > 0 and original.isalpha():
+  print original
+  word = original.lower()
+  first = word[0]
+  new_word = word + first + pyg
+  new_word = new_word[1:len(new_word)]
+else:
+  print print("vacío")
+```
+
+* 5.9
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+pyg = 'ay'
+
+original = raw_input("Ingrese una palabra en inglés: ")
+
+if len(original) > 0 and original.isalpha():
+  word = original.lower()
+  first = word[0]
+  new_word = word + first + pyg
+  new_word = new_word[1:len(new_word)]
+  print(new_word)
+else:
+  print print("vacío")
+```
+
+## Funciones
+* 6.1
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 ```
