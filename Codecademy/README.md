@@ -3,11 +3,15 @@
 ## Sintaxis
 * 1.1
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print('Hola')
 ```
 
 * 1.2
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print('Guaco')
 print('Marijuana')
 print('Muerte')
@@ -15,28 +19,38 @@ print('Muerte')
 
 * 1.3
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print "Hola " + 'el macho cabrío'
 ```
 
 * 1.4 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print("How do you make a hot dog stand?')
 print(You take away its chair!)
 ```
 
 * 1.4 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print('How do you make a hot dog stand?')
 print("You take away its chair!")
 ```
 
 * 1.5
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 todays_date = '2019/06/24'
 ```
 
 * 1.6
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 product = 45 * 3
 remainder = 1398 % 11
 print(remainder)
@@ -44,6 +58,8 @@ print(remainder)
 
 * 1.7 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 january_to_june_rainfall = 1.93 + 0.71 + 3.53 + 3.41 + 3.69 + 4.50
 annual_rainfall = january_to_june_rainfall
 
@@ -61,6 +77,8 @@ december_rainfall = 4.06
 
 * 1.7 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 january_to_june_rainfall = 1.93 + 0.71 + 3.53 + 3.41 + 3.69 + 4.50
 annual_rainfall = january_to_june_rainfall
 
@@ -85,6 +103,8 @@ annual_rainfall += december_rainfall
 
 * 1.8
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 city_name = "St. Potatosburg"
 # la siguiente variable contiene un número entero que representa la suma de ciudadanos
 city_pop = 340000
@@ -92,6 +112,8 @@ city_pop = 340000
 
 * 1.9
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 cucumbers = 6 #Número de pepinos que me gustaría comprar.
 price_per_cucumber = 3.25
 total_cost = cucumbers * price_per_cucumber
@@ -104,6 +126,8 @@ print(type(total_cost))
 
 * 1.10
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 cucumbers = 100
 num_people = 6
 
@@ -116,7 +140,8 @@ print(float_cucumbers_per_person)
 
 * 1.11
 ```python
-#encoding: utf-8
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 haiku = """Você pode crer
 O pior cego
 É o que quer ver."""
@@ -128,6 +153,8 @@ It can also be used as a multi-line comment
 
 * 1.12
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # Hi! I'm Maria and I live in script.py.
 # I'm an expert Python coder.
 # I'm 21 years old and I plan to program cool stuff forever.
@@ -140,6 +167,8 @@ print(int(name_is_maria))
 
 * 1.13
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 float_1 = 0.25
 float_2 = 40.0
 
@@ -151,6 +180,8 @@ print(big_string)
 
 * 1.14
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 skill_completed = 'Python Syntax'
 exercises_completed = 13
 # la siguiente variable contiene la cantidad de puntos para cada ejercicio puede cambiar, porque los puntos aún no existen
@@ -164,11 +195,15 @@ print("Tengo "+str(point_total)+" puntos!")
 ## Cadenas
 * 2.1
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 brian = "Hola vida!"
 ```
 
 * 2.2 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # Assign your variables below, each on its own line!
 
 
@@ -181,6 +216,8 @@ print viking
 
 * 2.2 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # Assign your variables below, each on its own line!
 
 caesar = "Graham"
@@ -196,6 +233,8 @@ print viking
 
 * 2.3 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # The string below is broken. Fix it using the escape backslash!
 
 print('This isn't flying, this is falling with style!')
@@ -203,6 +242,8 @@ print('This isn't flying, this is falling with style!')
 
 * 2.3 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # The string below is broken. Fix it using the escape backslash!
 
 print('This isn\'t flying, this is falling with style!')
@@ -210,6 +251,8 @@ print('This isn\'t flying, this is falling with style!')
 
 * 2.4
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 """
 The string "PYTHON" has six characters,
 numbered 0 to 5, as shown below:
@@ -231,30 +274,40 @@ print fifth_letter
 
 * 2.5
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 parrot = "Norwegian Blue"
 print( len(parrot)) # Comience a contar desde 1. Los espacios en blanco también cuentan.
 ```
 
 * 2.6
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 parrot = "Norwegian Blue"
 print( parrot.lower()) # Or "Norwegian Blue".lower()
 ```
 
 * 2.7
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 parrot = "Norwegian Blue"
 print( parrot.upper())
 ```
 
 * 2.8
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 pi = 3.14159265359
 print( str(pi))
 ```
 
 * 2.9
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 ministry = "The Ministry of Silly Walks"
 
 print (len(ministry))
@@ -263,6 +316,8 @@ print ministry.upper()
 
 * 2.10
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 """Dile a Python que imprima "Monty Python"
 a la linea de consola 4!"""
 
@@ -271,6 +326,8 @@ print ("Monty Python")
 
 * 2.11
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 """Asigna la cadena "Ping!" a
 la variable the_machine_goes on
 línea 5, luego imprímela en la línea 6!"""
@@ -281,6 +338,8 @@ print (the_machine_goes)
 
 * 2.12
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # Imprima la concatenación de "Spam y huevos" en la línea 3!
 
 print("Spam " + "y " + "huevos")
@@ -288,16 +347,22 @@ print("Spam " + "y " + "huevos")
 
 * 2.13 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print "El valor de pi está alrededor " + 3.1415
 ```
 
 * 2.13 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 print "El valor de pi está alrededor " + str(3.1415)
 ```
 
 * 2.14
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 string_1 = "Camelot"
 string_2 = "lugar"
 
@@ -313,6 +378,8 @@ print "03 - %02d - 2019" % (day)
 
 * 2.15 delante
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 name = raw_input("¿Cuál es su nombre?")
 quest = raw_input("¿Cuál es tu búsqueda?")
 color = raw_input("¿Cuál es tu color favorito?")
@@ -323,6 +390,8 @@ print "Ah, entonces tu nombre es ___, tu búsqueda es ___, " \
 
 * 2.15 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 name = raw_input("¿Cuál es su nombre?")
 quest = raw_input("¿Cuál es tu búsqueda?")
 color = raw_input("¿Cuál es tu color favorito?")
@@ -333,6 +402,8 @@ print "Ah, entonces tu nombre es %s, tu búsqueda es %s, " \
 
 * 2.16
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 # tres formas de crear cadenas
 str_1 = 'Alpha'
 str_2 = "Bravo"
@@ -364,11 +435,15 @@ print (my_string.upper())
 ## Fecha y hora
 * 3.1
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 ```
 
 * 3.2
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 
 now = datetime.now()
@@ -377,6 +452,8 @@ print(now)
 
 * 3.3
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 
 now = datetime.now()
@@ -390,6 +467,8 @@ print(now.hour)
 
 * 3.4
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 now = datetime.now()
 
@@ -399,6 +478,8 @@ print('%02d/%02d/%04d') % (now.day, now.month, now.year)
 
 * 3.5
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 now = datetime.now()
 
@@ -407,6 +488,8 @@ print '%02d:%02d:%02d' % (now.hour, now.minute, now.second)
 
 * 3.6
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from datetime import datetime
 now = datetime.now()
 
@@ -416,7 +499,8 @@ print ('%02d/%02d/%04d' + ' ' '%02d:%02d:%02d') % (now.month, now.day, now.year,
 ## Condiciones y flujo de control
 * 4.1
 ```python
-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 ```
 
 * 4.2
