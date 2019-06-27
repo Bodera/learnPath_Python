@@ -1,13 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-def using_control_once():
-	if (0 > -1):
-		return "Success #1"
-
-def using_control_again():
-	if ('55' != 55):
-		return "Success #2"
-
-print using_control_once()
-print using_control_again()
+def distance_from_zero(arg):
+	if(type(arg) ==  int or type(arg) == float):
+		return abs(arg)
+	else:
+		return 'Nope'
