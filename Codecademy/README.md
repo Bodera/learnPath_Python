@@ -1916,3 +1916,153 @@ for item in a:
 	if(item % 2 == 0):
 		print(item)
 ```
+
+* 9.4
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Escriba una función que cuente cuántas veces aparece la cadena "fizz" en una lista.
+def fizz_count(x):
+  count = 0
+  for item in x:
+    if(item == "fizz"):
+      count += 1
+  return count
+
+x = ['fazz', 'fezz', 'fizz', 'fozz', 'fuzz', 'fizz']
+
+upperX = []
+for item in x:
+    upperX.append(item.upper())
+    
+capitalizedX = []
+for item in x:
+  	capitalizedX.append(item.capitalize())
+    
+print(upperX)
+print(capitalizedX)
+print(fizz_count(x))
+```
+
+* 9.5
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+for letter in "Codecademy":
+	print(letter)
+    
+# Líneas vacías para que la salida sea bonita
+print
+print
+
+word = "Programming is fun!"
+
+for letter in word:
+	# Sólo imprima la letra i
+	if(letter == "i"):
+		print(letter)
+```
+
+* 9.6
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
+```
+
+* 9.7
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
+
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pea": 15
+}
+```
+
+* 9.8
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+once = {'a': 1, 'b': 2}
+twice = {'a': 2, 'b': 4}
+for key in once:
+  print("Once: %s" % once[key])
+  print("Twice: %s" % twice[key])
+"""
+
+#Diccionario con información de precios
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
+
+#Diccionario con información sobre stock
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pea": 15
+}
+
+#Imprime el nombre del producto, su precio y cantidad en stock
+# en orden alfabético
+for key in sorted(prices):
+	print("%s price: %s stock: %s" % (key, prices[key], stock[key]))
+```
+
+* 9.9
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Diccionario con información de precios
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
+
+#Diccionario con información sobre stock
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pea": 15
+}
+
+#Imprime el nombre del producto, su precio y cantidad en stock
+# en orden alfabético
+for key in sorted(prices):
+	print("%s price: %s stock: %s" % (key, prices[key], stock[key]))
+
+#Imprime el precio de stock de cada producto y suma el total acumulado
+total = 0
+for values in prices:
+	value = prices[values] * stock[values]
+	print(value)
+	total += value
+print(total)
+```
