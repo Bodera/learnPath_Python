@@ -1530,3 +1530,201 @@ def trip_cost(city, days, spending_money):
 
 print(trip_cost("Los Angeles", 5, 600))
 ```
+
+## Listas y Diccionarios
+* 8.1 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+zoo_animals = [ "Halcón", "Búho", "Urraca", ];
+# One animal is missing!
+
+if len(zoo_animals) > 3:
+	print "El primer animal en el zoológico es el " + zoo_animals[0]
+	print "El segundo animal en el zoológico es el " + zoo_animals[1]
+	print "El tercer animal en el zoológico es el " + zoo_animals[2]
+	print "El cuarto animal del zoo es el " + zoo_animals[3]
+```
+
+* 8.1 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+zoo_animals = [ "Halcón", "Búho", "Urraca", "Tucán"];
+# One animal is missing!
+
+if len(zoo_animals) > 3:
+	print "El primer animal en el zoológico es el " + zoo_animals[0]
+	print "El segundo animal en el zoológico es el " + zoo_animals[1]
+	print "El tercer animal en el zoológico es el " + zoo_animals[2]
+	print "El cuarto animal del zoo es el " + zoo_animals[3]
+```
+
+* 8.2 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+numbers = [5, 6, 7, 8]
+
+print "Sumando los números en los índices 0 y 2..."
+print numbers[0] + numbers[2]
+print "Sumando los números en los índices 1 y 3...."
+#¡Tu código aquí!
+```
+
+* 8.2 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+numbers = [5, 6, 7, 8]
+
+print "Sumando los números en los índices 0 y 2..."
+print numbers[0] + numbers[2]
+print "Sumando los números en los índices 1 y 3...."
+# tu código aquí
+print numbers[1] + numbers[3]
+```
+
+* 8.3 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+zoo_animals = ["Cabra", "Jirafa", "perezoso", "tigre"]
+# Anoche el perezoso de nuestro zoológico atacó brutalmente brutalmente
+# el pobre tigre y se lo comió entero.
+
+# El feroz perezoso ha sido reemplazado por una hiena amistosa.
+zoo_animals[2] = "hiena"
+
+# Qué llenará el vacío dejado por nuestro querido tigre difunto?
+#¡Tu código aquí!
+```
+
+* 8.3 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+zoo_animals = ["Cabra", "Jirafa", "perezoso", "tigre"]
+# Anoche el perezoso de nuestro zoológico atacó brutalmente brutalmente
+# el pobre tigre y se lo comió entero.
+
+# El feroz perezoso ha sido reemplazado por una hiena amistosa.
+zoo_animals[2] = "hiena"
+
+# Qué llenará el vacío dejado por nuestro querido tigre difunto?
+#¡Tu código aquí!
+zoo_animals[3] = "camello"
+```
+
+* 8.4 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+suitcase = [] 
+suitcase.append("gafas de sol")
+
+#¡Tu código aquí!
+
+
+
+
+list_length = ________ # Establezca esto en la longitud de la maleta
+
+print "Hay %d elementos en la maleta" % (list_length)
+print suitcase
+```
+
+* 8.4 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+suitcase = []
+suitcase.append("gafas de sol")
+
+#¡Tu código aquí!
+suitcase.append("toalla")
+suitcase.append("zapatos")
+suitcase.append("tapa")
+
+
+list_length = len(suitcase) # Establezca esto en la longitud de la maleta
+
+print "Hay %d elementos en la maleta" % (list_length)
+print suitcase
+```
+
+* 8.5 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+suitcase = ["gafas de sol", "sombrero", "pasaporte", "portátil", "traje", "zapatos"]
+
+# El primer y segundo elemento (índice cero y uno)
+first = suitcase[0:2]
+
+# Tercer y cuarto elementos (índice dos y tres)
+middle = 
+
+# Los dos últimos elementos (índice cuatro y cinco)
+last =  
+```
+
+* 8.5 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+suitcase = ["gafas de sol", "sombrero", "pasaporte", "portátil", "traje", "zapatos"]
+
+# El primer y segundo elemento (índice cero y uno)
+first = suitcase[0:2]
+
+# Tercer y cuarto elementos (índice dos y tres)
+middle = suitcase[2:4]
+
+# Los dos últimos elementos (índice cuatro y cinco)
+last = suitcase[4:6]
+```
+
+* 8.6 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+animals = "catdogfrog"
+
+# Los tres primeros caracteres de los animales
+cat = animals[:3]
+
+# Los caracteres cuarto a sexto
+dog = 
+
+# Desde el séptimo caractere hasta el final
+frog = 
+```
+
+* 8.6 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+animals = "catdogfrog"
+
+# Los tres primeros caracteres de los animales
+cat = animals[:3]
+
+# Los caracteres cuarto a sexto
+dog = animals[3:6]
+
+# Desde el séptimo caractere hasta el final
+frog = animals[6:]
+```
