@@ -1728,3 +1728,191 @@ dog = animals[3:6]
 # Desde el séptimo caractere hasta el final
 frog = animals[6:]
 ```
+
+* 8.7 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+animals = ["aardvark", "tejón", "pato", "emu", "zorro"]
+duck_index = # Utilice index() para encontrar "pato"
+
+#¡Tu código aquí!
+
+print(animals) # Observe lo que imprime después de la operación de inserción
+```
+
+* 8.7 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+animals = ["aardvark", "tejón", "pato", "emu", "zorro"]
+duck_index = animals.index("pato")
+
+animals.insert(0, "Oso hormiguero")
+animals.insert(duck_index, "serpiente")
+
+print(animals) # Observe lo que imprime después de la operación de inserción
+```
+
+* 8.8
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+my_list = [1,9,3,8,5,7]
+
+for number in my_list:
+	#¡Tu código aquí!
+	print(number * 2)
+```
+
+* 8.9
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+start_list = [5, 3, 1, 2, 4]
+square_list = []
+
+for value in start_list:
+	square_list.append(value ** 2)
+
+print(square_list.sort())
+```
+
+* 8.10
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Asignación de un diccionario con tres pares clave-valor a los residentes:
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
+
+print(residents['Puffin']) #  Imprime el número de habitación de Puffin
+print(residents['Sloth'])
+print(residents['Burmese Python'])
+```
+
+* 8.11
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+menu = {} # Diccionario vacío
+menu['Chicken Alfredo'] = 14.50 # Adición de un nuevo par clave-valor
+print menu['Chicken Alfredo']
+
+# Su código aquí: Añadir algunos pares de precio de plato al menú!
+menu['Guacamole'] = 17.10
+menu['Cochinita pibil'] = 21.60
+menu['Quesadilla'] = 11.30
+menu['Huevos rancheros'] = 8.00
+menu['Chilli'] = 10.50
+
+print("Hay " + str(len(menu)) + "elementos en el menú.")
+print(menu)
+```
+
+* 8.12
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# clave - animal_name : valor - ubicación  
+zoo_animals = { 'Unicorn' : 'Cotton Candy House',
+'Sloth' : 'Rainforest Exhibit',
+'Bengal Tiger' : 'Jungle House',
+'Atlantic Puffin' : 'Arctic Exhibit',
+'Rockhopper Penguin' : 'Arctic Exhibit'}
+# Una declaración de diccionario (o lista) puede romperse en varias líneas
+
+# Eliminación de la entrada 'Unicornio'. (Los unicornios son increíblemente caros.)
+del zoo_animals['Unicorn']
+
+# ¡Tu código aquí!
+del zoo_animals['Sloth']
+del zoo_animals['Bengal Tiger']
+zoo_animals['Rockhopper Penguin'] = 'Falkland Islands'
+
+print(zoo_animals)
+```
+
+* 8.13
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+backpack = ['xylophone', 'dagger', 'tent', 'bread loaf']
+
+backpack.remove('dagger')
+```
+
+* 8.14
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+inventory = {
+  'gold' : 500,
+  'pouch' : ['flint', 'twine', 'gemstone'], # Se ha asignado una nueva lista a la clave 'pouch'
+  'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+}
+
+# Añadir una 'bolsa de arpillera' clave y asignarle una lista
+inventory['burlap bag'] = ['apple', 'small ruby', 'three-toed sloth']
+
+# Ordenar la lista que se encuentra debajo de la clave 'bolsa'
+inventory['pouch'].sort()
+
+# Su código aquí
+inventory['pocket'] = ['seashell', 'strange berry', 'lint']
+
+inventory['backpack'].sort()
+
+inventory['backpack'].remove('dagger')
+
+inventory['gold'] += 50
+```
+
+## Mini proyecto: Un día en el supermercado
+* 9.1
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+names = ["Adam","Alex","Mariah","Martine","Columbus"]
+
+for nombre in names:
+	print(nombre)
+```
+
+* 9.2
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+webster = {
+  "Aardvark" : "A star of a popular children's cartoon show.",
+  "Baa" : "The sound a goat makes.",
+  "Carpet": "Goes on the floor.",
+  "Dab": "A small amount."
+}
+
+# ¡Añade tu código a continuación!
+for cada_valor in webster:
+	print(webster[cada_valor])
+```
+
+* 9.3
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+for item in a:
+	if(item % 2 == 0):
+		print(item)
+```
