@@ -2039,30 +2039,111 @@ for key in sorted(prices):
 
 #Diccionario con información de precios
 prices = {
-  "banana": 4,
-  "apple": 2,
-  "orange": 1.5,
-  "pea": 3
+  "platano": 4,
+  "manzana": 2,
+  "naranja": 1.5,
+  "guisante": 3
 }
 
 #Diccionario con información sobre stock
+stock = {
+  "platano": 6,
+  "manzana": 0,
+  "naranja": 32,
+  "guisante": 15
+}
+
+#Imprime el nombre del producto, su precio y cantidad en stock
+# en orden alfabético
+for key in sorted(prices):
+	print("Fruta: %s - Precio: %s Stock: %s" % (key, prices[key], stock[key]))
+print() #una línea en blanco
+#Imprime el precio de stock de cada producto y suma el total acumulado
+total = 0
+for key in sorted(stock):
+	result = prices[key] * stock[key]
+	total += result
+	print("Fruta: %s - Precio en stock: %s" % (key, result))
+print("Cantidad de dinero en stock: %s" % total)
+```
+
+* 9.10
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+groceries = ["banana", "orange", "apple"]
+```
+
+* 9.11
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+shopping_list = ["banana", "orange", "apple"]
+
 stock = {
   "banana": 6,
   "apple": 0,
   "orange": 32,
   "pea": 15
 }
+    
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
 
-#Imprime el nombre del producto, su precio y cantidad en stock
-# en orden alfabético
-for key in sorted(prices):
-	print("%s price: %s stock: %s" % (key, prices[key], stock[key]))
-
-#Imprime el precio de stock de cada producto y suma el total acumulado
-total = 0
-for values in prices:
-	value = prices[values] * stock[values]
-	print(value)
-	total += value
-print(total)
+# ¡Añade tu código a continuación!
+def compute_bill(food):
+	total = 0
+	for item in food:
+		total += prices[item]
+	return total
 ```
+
+* 9.12
+Has practicado
+
+* Usando for bucles con listas y diccionarios.
+* Funciones de escritura con bucles, listas y diccionarios.
+* Actualización de datos en respuesta a cambios en el medio ambiente (por ejemplo, disminuyendo el número de plátanos en stock en 1 cuando vende uno).
+
+Aquí está el código final
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+shopping_list = ["banana", "orange", "apple"]
+
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pea": 15
+}
+    
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pea": 3
+}
+
+# ¡Añade tu código a continuación!
+def compute_bill(food):
+	total = 0
+	for item in food:
+		if stock[item] > 0:
+			total += prices[item]
+			stock[item] -= 1
+	return total
+	
+print(compute_bill(["banana", "orange", "apple", "pea"]))
+```
+
+## Desafío
+
+* 10.1
