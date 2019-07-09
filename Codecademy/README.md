@@ -1,5 +1,8 @@
 # Learn Python 2 [crash Codecademy](https://www.codecademy.com/learn/learn-python)
 
+## Atención
+El soporte para Python 2 ha terminado. En enero, 01 de 2020 [este reloj](https://pythonclock.org/) han alcanzado el 0. Los ejemplos expuestos aquí fueron probados y ejecutados de forma sin pudoras en Python 3.6
+
 __[Debes estudiar chicx](https://docs.python.org/3/)__
 
 ## Sintaxis
@@ -2106,12 +2109,11 @@ def compute_bill(food):
 
 * 9.12
 Has practicado
+ Usando for bucles con listas y diccionarios.  
+ Funciones de escritura con bucles, listas y diccionarios.  
+ Actualización de datos en respuesta a cambios en el medio ambiente (por ejemplo, disminuyendo el número de plátanos en stock en 1 cuando vende uno).  
 
-* Usando for bucles con listas y diccionarios.
-* Funciones de escritura con bucles, listas y diccionarios.
-* Actualización de datos en respuesta a cambios en el medio ambiente (por ejemplo, disminuyendo el número de plátanos en stock en 1 cuando vende uno).
-
-Aquí está el código final
+Aquí está el código final:
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
