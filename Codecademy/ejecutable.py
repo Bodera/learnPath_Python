@@ -1,29 +1,27 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-shopping_list = ["banana", "orange", "apple"]
+address = ["Flat Floor Street", "18", "New York"]
+pins = { "Mike": 1123, "Jow": 4468, "Jack Tequila": 0}
 
-stock = {
-  "banana": 6,
-  "apple": 0,
-  "orange": 32,
-  "pea": 15
-}
-    
-prices = {
-  "banana": 4,
-  "apple": 2,
-  "orange": 1.5,
-  "pea": 3
-}
+print(address[0], address[1])
 
-# ¡Añade tu código a continuación!
-def compute_bill(food):
-	total = 0
-	for item in food:
-		if stock[item] > 0:
-			total += prices[item]
-			stock[item] -= 1
-	return total
-	
-print(compute_bill(["banana", "orange", "apple", "pea"]))
+pin = int(input("Enter your pin: "))
+
+def find_in_file(f):
+	myFile = open("sample.txt", "r")
+	fruits = myFile.read()
+	#fruits = fruits.splitlines()
+	if f in fruits:
+		return "That fruit is in the list."
+	else:
+		return "No such fruit found!"
+
+if pin in pins.values():
+	fruit = input("Enter a fruit: ")
+	print(find_in_file(fruit))
+else:
+	print("Incorrect pin.")
+	print("This info can only be accessed by: ")
+	for key in pins.keys():
+		print(key)
