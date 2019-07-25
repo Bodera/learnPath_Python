@@ -1,20 +1,46 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+from random import randint
 
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+board = []
 
-#range(5) es un acceso directo para range(0, 5)
-board = [] #crea una cuadrícula de 5x5 con todos los "O"s, para "océano".
+for x in range(0, 5):
+  board.append(["O"] * 5)
 
-for O in range(5): #horizontal 
-	board.append(5 * ["O"]) #vertical
-	#board.append(5 * " O  ")
+def print_board(board):
+  for row in board:
+    print (" ".join(row))
 
-for value in board: 
-	print(value) #proba
+print_board(board)
 
-#print(board)
-print_board(board_in):
-	for value in board:
-		print(value)
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+#print (ship_row)
+#print (ship_col)
+
+#Podemos usar un bucle for para iterar a travs de un rango. Cada iteracin ser un turno.
+# Todo de aqu en adelante debe ir en tu bucle for!
+for turn in range(4): # 0,1,2,3.
+	guess_row = int(input("Guess Row: "))
+	guess_col = int(input("Guess Col: "))
+
+	if guess_row == ship_row and guess_col == ship_col:
+		print ("Congratulations! You sank my battleship!")
+		break
+	else:
+		if turn == 3:
+			print("Juego terminado")
+		if guess_row not in range(5) or guess_col not in range(5):
+			print ("Oops, that's not even in the ocean.")
+		elif board[guess_row][guess_col] == "X":
+			print( "You guessed that one already." )
+		else:
+			print ("You missed my battleship!")
+			board[guess_row][guess_col] = "X"
+	print_board(board)
+	# imprimir turno + 1 aquí
+	print("Turno", turn + 1)

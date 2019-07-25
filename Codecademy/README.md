@@ -2850,20 +2850,434 @@ print(board)
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 #range(5) es un acceso directo para range(0, 5)
-board = [] #crea una cuadrícula de 5x5 con todos los "O"s, para "océano".
+board = [] #crea una cuadricula de 5x5 con todos los "O"s, para "océano".
 
-for O in range(5): #horizontal 
+for value in range(5): #horizontal 
 	board.append(5 * ["O"]) #vertical
 	#board.append(5 * " O  ")
 
 for value in board: 
 	print(value) #proba
 
-#print(board)
-print_board(board_in):
-	for value in board:
+#print(board) #proba
+def print_board(board_in):
+	for row in board:
 		print(value)
+```
+
+* 12.3
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#range(5) es un acceso directo para range(0, 5)
+board = [] #crea una cuadricula de 5x5 con todos los "O"s, para "ocano".
+
+for O in range(5): #horizontal 
+	board.append(5 * ["O"]) #vertical
+
+#descomentar la línea para ver la prueba
+#for value in board: 
+	#print(value) 
+
+#print(board)
+def print_board(board_in):
+	for row in board:
+		print(" ".join(row))
+
+print_board(board)
+```
+
+* 12.4
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint 
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print(" ".join(row))
+
+# ¡Añada su código abajo!
+def random_row(board_in):
+  return randint(0, len(board_in) - 1)
+
+def random_col(board_in):
+  return randint(0, len(board_in) - 1)
+
+random_row(board)
+random_col(board)
+```
+
+* 12.5
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print(" ".join(row))
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+
+# ¡Añada su código abajo!
+print(ship_row) #fines de depuración
+print(ship_col) #fines de depuración
+
+guess_row = int(input("Adivina Row: "))
+guess_col = int(input("Adivina Col: "))
+```
+
+* 12.6
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print(" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print(ship_row) #fines de depuración
+print(ship_col) #fines de depuración
+
+guess_row = int(input("Adivina Row: "))
+guess_col = int(input("Adivina Col: "))
+
+# ¡Añada su código abajo!
+if guess_row == ship_row and guess_col == ship_col:
+  print("¡Felicidades! ¡Tú hundiste mi acorazado!")
+```
+
+* 12.7
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print(" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print(ship_row) #fines de depuración
+print(ship_col) #fines de depuración
+
+guess_row = int(input("Adivina Row: "))
+guess_col = int(input("Adivina Col: "))
+
+# ¡Añada su código abajo!
+if guess_row == ship_row and guess_col == ship_col:
+  print("¡Felicidades! ¡Tú hundiste mi acorazado!")
+else:
+  print("¡Te perdiste mi acorazado!")
+  board[guess_row][guess_col] = "X"
+ 
+print_board(board)
+```
+
+* 12.8
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print(" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print(ship_row) #fines de depuración
+print(ship_col) #fines de depuración
+
+guess_row = int(input("Adivina Row: "))
+guess_col = int(input("Adivina Col: "))
+
+# La función range() solo acepta números enteros como argumento.
+if guess_row == ship_row and guess_col == ship_col:
+	print("¡Felicidades! ¡Tú hundiste mi acorazado!")
+elif guess_row not in range(5) or guess_col not in range(5):
+	print("Ooops, eso ni siquiera está en el océano.")
+else:
+	print("¡Te perdiste mi acorazado!")
+	board[guess_row][guess_col] = "X"
+ 
+print_board(board)
+```
+
+* 12.9
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print (" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print(ship_row) #fines de depuración
+print(ship_col) #fines de depuración
+
+guess_row = int(input("Adivina Row: "))
+guess_col = int(input("Adivina Col: "))
+
+# ¡Añada su código abajo!
+if guess_row == ship_row and guess_col == ship_col:
+	print("¡Felicidades! ¡Tú hundiste mi acorazado!")
+elif guess_row not in range(5) or guess_col not in range(5):
+	print("Ooops, eso ni siquiera está en el océano.")
+elif board[guess_row][guess_col] == "X":
+	print("Ya lo has adivinado.")
+else:
+	print("¡Te perdiste mi acorazado!")
+	board[guess_row][guess_col] = "X"
+ 
+print_board(board)
+```
+
+* 12.10
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print (" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print (ship_row)
+print (ship_col)
+
+#Podemos usar un bucle for para iterar a través de un rango. Cada iteración será un turno.
+# ¡Todo de aquí en adelante debe ir en tu bucle for!
+for turn in range(4): # 0,1,2,3.
+	guess_row = int(input("Adivina Row: "))
+	guess_col = int(input("Adivina Col: "))
+
+	if guess_row == ship_row and guess_col == ship_col:
+		print ("¡Felicidades! ¡Tú hundiste mi acorazado!")
+	else:
+		if guess_row not in range(5) or guess_col not in range(5):
+			print ("Ooops, eso ni siquiera está en el océano.")
+		elif board[guess_row][guess_col] == "X":
+			print( "Ya lo has adivinado." )
+		else:
+			print ("¡Te perdiste mi acorazado!")
+			board[guess_row][guess_col] = "X"
+	print_board(board)
+	# imprimir turno + 1 aquí
+	print("Turno", turn + 1)
+```
+
+* 12.11
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print (" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print (ship_row)
+print (ship_col)
+
+#Podemos usar un bucle for para iterar a travs de un rango. Cada iteracin ser un turno.
+# Todo de aqu en adelante debe ir en tu bucle for!
+for turn in range(4): # 0,1,2,3.
+	guess_row = int(input("Adivina Row: "))
+	guess_col = int(input("Adivina Col: "))
+
+	if guess_row == ship_row and guess_col == ship_col:
+		print ("¡Felicidades! ¡Tú hundiste mi acorazado!")
+	else:
+		if turn == 3:
+			print("Juego terminado")
+		if guess_row not in range(5) or guess_col not in range(5):
+			print ("Ooops, eso ni siquiera está en el océano.")
+		elif board[guess_row][guess_col] == "X":
+			print( "Ya lo has adivinado." )
+		else:
+			print ("¡Te perdiste mi acorazado!")
+			board[guess_row][guess_col] = "X"
+	print_board(board)
+	# imprimir turno + 1 aquí
+	print("Turno", turn + 1)
+```
+
+* 12.12
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from random import randint
+
+board = []
+
+for x in range(0, 5):
+  board.append(["O"] * 5)
+
+def print_board(board):
+  for row in board:
+    print (" ".join(row))
+
+print_board(board)
+
+def random_row(board):
+  return randint(0, len(board) - 1)
+
+def random_col(board):
+  return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+#print (ship_row)
+#print (ship_col)
+
+#Podemos usar un bucle for para iterar a travs de un rango. Cada iteracin ser un turno.
+# Todo de aqu en adelante debe ir en tu bucle for!
+for turn in range(4): # 0,1,2,3.
+	guess_row = int(input("Adivina Row: "))
+	guess_col = int(input("Adivina Col: "))
+
+	if guess_row == ship_row and guess_col == ship_col:
+		print ("¡Felicidades! ¡Tú hundiste mi acorazado!")
+		break
+	else:
+		if turn == 3:
+			print("Juego terminado")
+		if guess_row not in range(5) or guess_col not in range(5):
+			print ("Ooops, eso ni siquiera está en el océano.")
+		elif board[guess_row][guess_col] == "X":
+			print( "Ya lo has adivinado." )
+		else:
+			print ("¡Te perdiste mi acorazado!")
+			board[guess_row][guess_col] = "X"
+	print_board(board)
+	# imprimir turno + 1 aquí
+	print("Turno", turn + 1)
+```
+
+#### Próximos pasos
+1. Crea múltiples acorazados: deberás tener cuidado porque debes asegurarte de no colocarlos encima del otro en el tablero de juego. También querrás asegurarte de equilibrar el tamaño del tablero con la cantidad de barcos, por lo que el juego sigue siendo desafiante y divertido de jugar.
+
+2. Crea acorazados de diferentes tamaños: esto es más complicado de lo que parece. Todas las partes del acorazado deben estar en contacto vertical u horizontal y debes asegurarte de no colocar accidentalmente parte de un barco fuera del costado del tablero.
+
+3. Haz de tu juego un juego para dos jugadores.
+
+4. ¡Usa las funciones para permitir que tu juego tenga más funciones como revanchas, estadísticas y más!
