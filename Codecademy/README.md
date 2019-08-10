@@ -3281,3 +3281,105 @@ for turn in range(4): # 0,1,2,3.
 3. Haz de tu juego un juego para dos jugadores.
 
 4. ¡Usa las funciones para permitir que tu juego tenga más funciones como revanchas, estadísticas y más!
+
+
+* 13.1 delante
+Mientras estés aquí
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#El bucle while
+#En lugar de ejecutar si algo es verdadero, se ejecuta mientras esa cosa es verdadera.
+
+count = 0
+
+if count < 5:
+	print("Hello, I am an if statement and count is", count)
+
+while count < 5:
+	print("Hello, I am a while and count is", count)
+	count += 1
+```
+
+* 13.1 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+count = 0
+
+if count < 5:
+	print("Hello, I am an if statement and count is", count)
+
+while count < 10:
+	print("Hello, I am a while and count is", count)
+	count += 1
+```
+
+* 13.2
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#La variable loop_condition se establece en True
+loop_condition = True 
+
+#El ciclo while comprueba si loop_condition es True. Es así que se ingresa al bucle.
+while loop_condition:
+	#La declaración de impresión se ejecuta.
+	print("I am a loop")
+	#La variable loop_condition se establece en False.
+	loop_condition = False
+
+#El ciclo while vuelve a comprobar si loop_condition es True.
+#No lo es, por lo que el bucle no se ejecuta por segunda vez.
+```
+
+* 13.3 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+num = 1
+
+while _______:  #Rellene la condición
+  #Imprimir num al cuadrado
+  #Incremento num (¡asegúrese de hacer esto!)
+```
+
+* 13.3 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+num = 1
+
+while num <= 10:  #Rellene la condición
+    #Imprimir num al cuadrado
+    print(num ** 2)
+    #Incremento num (¡asegúrese de hacer esto!)
+    num += 1
+```
+
+* 13.4 delante
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+choice = input("¿Disfrutas de Python? (y/n)")
+
+while ________:  #Rellene la condición (antes de los dos puntos)
+	choice = input("Lo siento, no entendí eso. Entre de Nuevo: ")
+```
+
+* 13.4 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+choice = input("¿Disfrutas de Python? (y/n)")
+
+while choice != 'y' and choice != 'Y' and choice != 'n' and choice != 'N':  #Rellene la condición (antes de los dos puntos)
+	choice = input("Lo siento, no entendí eso. Entre de Nuevo: ")
+```
