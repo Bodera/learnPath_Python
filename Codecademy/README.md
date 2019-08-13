@@ -3517,4 +3517,80 @@ hobbies = []
 
 * 13.10 después
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+hobbies = []
+
+# ¡Agregue su código a continuación!
+for i in range(3):
+	hobby = input("Tell me your hobbies: ")
+	hobbies.append(hobby)
+
+print(hobbies)
+```
+
+* 13.11 delante
+```python
+thing = "spam!"
+
+for c in thing:
+    print (c)
+
+word = "eggs!"
+
+#¡Agregue su código a continuación!
+```
+
+* 13.11 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+thing = "spam!"
+
+for c in thing:
+  	print (c)
+
+word = "eggs!"
+
+#¡Agregue su código a continuación!
+for char in word:
+    print(char)
+```
+
+* 13.12 delante
+```python
+phrase = "A bird in the hand..."
+
+#Agregue su bucle for
+
+
+
+
+
+#¡No elimine esta declaración print!
+print
+```
+
+* 13.12 después
+```python
+#Filtremos la letra "A" de nuestra cadena.
+phrase = "A bird in the hand..."
+
+#Agregue su bucle for
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+phrase = "A bird in the hand..."
+
+#Agregue su bucle for
+for char in phrase:
+    if char == "A" or char == "a":
+        print ("X", end="")
+    else:
+    	print (char, end="")
+
+#¡No elimine esta declaración print!
+print()
 ```
