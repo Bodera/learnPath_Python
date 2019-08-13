@@ -3284,7 +3284,6 @@ for turn in range(4): # 0,1,2,3.
 
 
 * 13.1 delante
-Mientras estés aquí
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -3381,5 +3380,141 @@ while ________:  #Rellene la condición (antes de los dos puntos)
 choice = input("¿Disfrutas de Python? (y/n)")
 
 while choice != 'y' and choice != 'Y' and choice != 'n' and choice != 'N':  #Rellene la condición (antes de los dos puntos)
-	choice = input("Lo siento, no entendí eso. Entre de Nuevo: ")
+	choice = input("Lo siento, no entendí eso. Entre de nuevo: ")
+```
+
+* 13.5 delante
+```python
+#Un bucle infinito es un bucle que nunca sale. Esto puede suceder por algunas razones:
+
+#La condición de bucle no puede ser falsa (por ejemplo, mientras 1 != 2)
+
+#La lógica del bucle evita que la condición del bucle se vuelva falsa.
+
+count = 0
+
+while count < 10
+    print (count)
+
+```
+
+* 13.5 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+count = 0
+
+while count < 10:
+    print (count)
+    count += 1
+```
+
+* 13.6
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#El break es una declaración de una línea que significa "salir del bucle actual".
+#Se garantiza que el bucle se ejecute al menos una vez.
+count = 0
+
+while True:
+    print (count)
+    count += 1
+    if count >= 10:
+        break
+```
+
+* 13.7
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Algo completamente diferente sobre Python es la construcción while/else. while/else es similar a if/else, pero hay una diferencia: el bloque else se ejecutará cada vez que la condición del bucle se evalúe como False. Esto significa que se ejecutará si el ciclo nunca se ingresa o si el ciclo sale normalmente. Si el ciclo sale como resultado de un break, el resto no se ejecutará.
+#En este ejemplo, el bucle se romperá si se genera un 5 y el resto no se ejecutará. De lo contrario, después de que se generen 3 números, la condición del bucle se convertirá en falsa y el resto se ejecutará.
+
+import random
+
+print ("¡Números de la suerte! Se generarán 3 números.")
+print ("Si uno de ellos es un '5', ¡pierdes!")
+
+count = 0
+while count < 3:
+  	num = random.randint(1, 6)
+  	print (num)
+  	if num == 5:
+	    print ("Lo siento, ¡pierdes!")
+	    break
+  	count += 1
+else:
+  	print ("¡Ganaste!")
+```
+
+* 13.8 delante
+```python
+from random import randint
+
+# Generates a number from 1 through 10 inclusive
+random_number = randint(1, 10)
+
+guesses_left = 3
+# Start your game!
+
+```
+
+* 13.8 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Del módulo random solo importamos la función randint
+from random import randint 
+
+#Genera un número del 1 al 10 inclusive
+random_number = randint(1, 10)
+
+guesses_left = 3
+
+#¡Comienza tu juego!
+print("¡Bienvenido a mi juego de azar!")
+print("Tienes tres oportunidades para acertar en el misterioso número. 1 a 10")
+
+while guesses_left != 0:
+	guess = int(input("Dime qué número crees que és.\n"))
+	if (guess == random_number):
+		print("¡Ganaste!")
+		break
+	guesses_left -= 1
+else:
+	print("Perdíste.")
+```
+
+* 13.9 delante
+```python
+print ("Contando...")
+
+for i in range(10):
+  print (i)
+```
+
+* 13.9 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+print ("Contando...")
+
+for i in range(20):
+  print (i)
+```
+
+* 13.10 delante
+```python
+hobbies = []
+
+#¡Agregue su código a continuación!
+```
+
+* 13.10 después
+```python
 ```
