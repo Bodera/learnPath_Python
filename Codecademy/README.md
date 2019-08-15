@@ -1,4 +1,4 @@
-# Learn Python 2 [crash Codecademy](https://www.codecademy.com/learn/learn-python)
+# Learn Python 2 [crash course Codecademy](https://www.codecademy.com/learn/learn-python)
 
 ## Atención
 El soporte para Python 2 ha terminado. En enero, 01 de 2020 [este reloj](https://pythonclock.org/) han alcanzado el 0. Los ejemplos expuestos aquí fueron probados y ejecutados de forma sin pudoras en Python 3.6
@@ -3593,4 +3593,152 @@ for char in phrase:
 
 #¡No elimine esta declaración print!
 print()
+```
+
+* 13.13 delante
+```python
+#Quizás el uso más útil (y más común) de for bucles es revisar una lista
+#En cada iteración, la variable num será el siguiente valor en la lista. Entonces, la primera vez, será 7, la segunda será 9, luego 12, 54, 99, y luego el bucle saldrá cuando no haya más valores en la lista.
+numbers  = [7, 9, 12, 54, 99]
+
+print ("Esta lista contiene: ")
+
+for num in numbers:
+	print (num)
+
+#¡Agrega tu bucle a continuación!
+```
+* 13.13 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+numbers  = [7, 9, 12, 54, 99]
+
+print ("Esta lista contiene: ")
+
+for num in numbers:
+	print (num)
+
+#¡Agrega tu bucle a continuación!
+for number in numbers:
+    print(pow(number,2))
+```
+
+* 13.14
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'}
+
+for key in d:
+    #¡Tu código aquí!
+    print(key + " " + d[key])
+```
+
+* 13.15 delante
+```python
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print ('Sus elecciones son:')
+for index, item in enumerate(choices):
+  print (index, item)
+```
+
+* 13.15 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print ('Sus elecciones son:')
+for index, item in enumerate(choices):
+    index += 1
+    print (index, item)
+```
+
+* 13.16 delante
+```python
+#También es común tener que repetir dos listas a la vez. Aquí es donde la función zip incorporada es útil.
+#zip creará pares de elementos cuando pasen dos listas, y se detendrá al final de la lista más corta.
+#¡zip también puede manejar tres o más listas!
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+#Salida: (3,2), (9,4), (17,8), (15,10), (19,30)
+```
+
+* 13.16 después
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+    #¡Agrega tu código aquí!
+    if a > b:
+        print (a)
+    else:
+        print (b)
+```
+
+* 13.17
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#En este caso, la instrucción else se ejecuta después de for, pero solo si for for finaliza normalmente, no con una instrucción break. Este código se romperá cuando llegue a 'tomate', por lo que el bloque else no se ejecutará.
+
+#Juega con este código para cambiar su salida.
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print ('You have...')
+for f in fruits:
+    if f == 'tomato':
+        print ('A tomato is not a fruit!') # (De hecho lo es.)
+        break
+    print ('A', f)
+else:
+    print ('A fine selection of fruits!')
+```
+
+* 13.18
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Cree su propia declaración for/else desde cero
+
+from time import perf_counter 
+
+time_start = perf_counter()
+
+personas = ["Benjamín", "Maite", "Gaspar", "Elena", "Mabel"]
+edad = [27, 52, 18, 34, 40]
+sexo = ["Hombre", "Mujer", "Hombre", "Mujer", "Periodista"]
+
+mas_viejo = max(edad)
+
+for a, b, c in zip(personas, edad, sexo):
+    if (c == 'Mujer'):
+        print(a, "tiene", b, "años y es una", c)
+    elif (c == 'Hombre'):
+        print(a, "tiene", b, "años y es un", c)
+    else:
+        print(a, "tiene", b, "años pero no sé lo qué es", c)
+else:
+    for a, b, c in zip(personas, edad, sexo):
+        if (b == mas_viejo):
+            print(a, "es la persona más vieja.")
+
+time_stop = perf_counter()
+
+print("Elapsed time:", time_stop - time_start)
 ```
