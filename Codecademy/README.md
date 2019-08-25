@@ -3734,11 +3734,170 @@ for a, b, c in zip(personas, edad, sexo):
     else:
         print(a, "tiene", b, "años pero no sé lo qué es", c)
 else:
-    for a, b, c in zip(personas, edad, sexo):
+    for a, b in zip(personas, edad):
         if (b == mas_viejo):
             print(a, "es la persona más vieja.")
 
 time_stop = perf_counter()
 
 print("Elapsed time:", time_stop - time_start)
+```
+
+* 14.1 
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def is_even(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+
+print(is_even(19))
+```
+
+* 14.2
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def is_int(x):
+    if (x == int(x)):
+        return True
+    else:
+        return False
+
+print(is_int(-19.0000))
+```
+
+* 14.3
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+def digit_sum(n):
+    a = 0
+    if n < 0:
+        n = n * -1
+        while n > 0:
+            a += int(n % 10) #incremento de la variable auxiliar
+            n = n // 10 #efectuando división entera
+        return a
+    elif n == 0:
+        return n
+    else:
+        while n > 0:
+            a += int(n % 10)
+            n = n // 10
+        return a
+
+print(digit_sum(212))
+```
+
+* 14.4
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+def factorial(x):
+    if x > 0:
+        return x * factorial(x - 1) #función recursiva
+    elif x == 0:
+        return 1
+    else:
+        return False
+
+print(factorial(6))
+```
+
+* 14.5
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+def is_prime(x):
+    if x <= 1: #Los números primos también deben ser mayores que 1
+        return False
+    elif x == 2:
+        return True
+    else:
+        for value in range(2, x): #range(start, stop)
+            if not x % value:
+                return False
+        return True
+print(is_prime(9))
+```
+
+* 14.6
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+def reverse(text):
+    reversed_text = ""
+    #print(lent(text))
+    text_length = len(text) - 1
+    #print(text[text_length])
+    while text_length >= 0:
+        reversed_text += text[text_length]
+        text_length -= 1
+    return reversed_text
+print (reverse("»»B²A¹««"))
+```
+
+* 14.7
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def anti_vowel(text):
+    new_text = ""
+    for char in text:
+        if char.lower() not in "aeiou":
+            new_text += char
+    return new_text
+print (anti_vowel("Buenos días!"))
+```
+
+* 14.8
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+         "x": 8, "z": 10}
+
+def scrabble_score(word):
+    word = word.lower()
+    total_points = 0
+    for letter in word:
+        if letter in score:
+            total_points += score.get(letter)
+    return total_points
+print(scrabble_score("Oponopono"))
+```
+
+* 14.9
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def censor(text, word):
+    words = text.split()
+    print(words)
+    result = ''
+    stars = '*' * len(word)
+    count = 0
+    for match in words:
+        if match == word:
+            words[count] = stars
+        count += 1
+    result = ' '.join(words)
+    return result
+print(censor('lala Opa opa opa', 'opa'))
+```
+
+* 14.10
+```python
+
 ```
