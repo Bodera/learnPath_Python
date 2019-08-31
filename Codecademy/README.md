@@ -3743,6 +3743,8 @@ time_stop = perf_counter()
 print("Elapsed time:", time_stop - time_start)
 ```
 
+## Practicando lo que aprendiste
+
 * 14.1 
 ```python
 #!/usr/bin/python
@@ -3899,5 +3901,99 @@ print(censor('lala Opa opa opa', 'opa'))
 
 * 14.10
 ```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
+def count(sequence, item):
+    #return sequence.count(item) #esta manera es hacer trampa
+    total = 0
+    for value in range(len(sequence)): #de cero a len(sequence)-1
+        if sequence[value] == item:
+            total+=1
+    return total
+print (count([['0',1,0,1,1]], ['0',1,0,1,1]))
+"""
+Alternativa
+def count(sequence, item):
+    count = 0
+    for i in sequence:
+        if sequence[i] == item:
+            count += 1
+    return count
+  
+print count([[1,1]], [1])
+"""
+```
+
+* 14.11
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def purify(integer_list):
+    purified_list = []
+    for value in integer_list:
+        if value % 2 == 0:
+            purified_list.append(value)
+    return purified_list
+print(purify([1,2,3,4,5,6,7,8,9,10]))
+```
+
+* 14.12
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def product(integer_list):
+    total = 1
+    for value in integer_list:
+        if len(integer_list) < 1:
+            return 0
+            break
+        total *= value
+    return total
+print (product([1,2,1,2,5]))
+```
+
+* 14.13
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+def remove_duplicates(user_list):
+    #los diccionarios no pueden tener claves duplicadas
+    processed_list = list(dict.fromkeys(user_list))
+    return processed_list
+print (remove_duplicates([1,2,3,1,3]))
+"""
+Alternativa
+
+def remove_duplicates(user_list):
+    processed_list = []
+    for value in user_list:
+        if value not in processed_list:
+            processed_list.append(value)
+    return processed_list
+print (remove_duplicates([1,2,3,1,3]))
+"""
+```
+
+* 14.14
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+#Thanks to Er CEO Vora Mayur
+#https://stackoverflow.com/questions/45003783/how-do-i-find-the-median-of-a-list-in-python
+def median(user_list):
+    ordered_list = sorted(user_list)
+    if len(ordered_list) % 2 == 1:
+        return ordered_list[(len(ordered_list)+1)//2-1]
+    else:
+        lower = ordered_list[(len(ordered_list)+1)//2-1]
+        upper = ordered_list[(len(ordered_list)+1)//2]
+        print(lower, upper)
+        return (lower+upper) / 2.0 
+        #return float(lower+upper) / 2
+print (median([1,2,3,4,5,6,7,8,9,10]))
 ```
