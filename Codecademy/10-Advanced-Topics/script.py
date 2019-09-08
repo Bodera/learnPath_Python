@@ -1,9 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-my_list = range(16)
-#print (filter(lambda x: x % 3 == 0, my_list))
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
 
-def by_three(x):
-  return x % 3 == 0
-by_three(my_list)
+message = ''.join(filter(lambda x: x != 'X', garbled))
+print (message)

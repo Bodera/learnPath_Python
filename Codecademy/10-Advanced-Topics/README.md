@@ -158,8 +158,90 @@ print (middle_third)
 
 ## Functional programming, *lambda*, and anonymous functions
 
+Si su código necesita procesar una función en algún momento, considere usar su cabeza primero. ¿Es más rentable declarar una función explícita usando `def` que se llamará en otras situaciones, o crear una función sin nombre usando el operador `lambda` por una circunstancia única?
+
 * 16.12
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+my_list = list(range(16))
+print (my_list)
+print (list(filter(lambda x: x % 3 == 0, my_list)))
+```
+
+* 16.13
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+languages = ["HTML", "JavaScript", "Python", "Ruby"]
+
+# ¡Agrega argumentos al filter()!
+print (list(filter(lambda x: x == 'Python', languages)))
+```
+
+* 16.14
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Para recordarle a tu cerebro
+cubes = [x ** 3 for x in range(1, 11)]
+print (list(filter(lambda x: x % 3 == 0, cubes)))
+
+# Ahora hazlo por tu cuenta
+squares = [x ** 2 for x in range(1,11)]
+print (list(filter(lambda x : x >=30 and x <=70, squares)))
+```
+
+## El repaso
+
+* 16.15
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+movies = {
+  "Monty Python and the Holy Grail": "Great",
+  "Monty Python's Life of Brian": "Good",
+  "Monty Python's Meaning of Life": "Okay"
+}
+
+#for key in movies:
+#    print (key, movies[key])
+
+print (movies.items())
+```
+
+* 16.16
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+threes_and_fives = [x for x in range(1,16) if x % 3 == 0 or x % 5 == 0]
+
+print (threes_and_fives)
+```
+
+* 16.17
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+garbled = "!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI"
+
+message = garbled[::-2]
+print (message)
+```
+
+* 16.18
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+
+message = ''.join(filter(lambda x: x != 'X', garbled))
+print (message)
 ```
