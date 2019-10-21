@@ -494,3 +494,189 @@ class Equilateral(Triangle):
         self.angle2 = self.angle
         self.angle3 = self.angle
 ```
+
+* 18.19
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""creando clases"""
+class Car(object):
+    pass
+```
+
+* 18.20
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""Crear instancias de clases"""
+class Car(object):
+    pass
+
+my_car = Car()
+```
+
+* 18.21
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""establecer variables miembro"""
+class Car(object):
+    condition = "new"
+
+my_car = Car()
+```
+
+* 18.22
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""acceder a las variables miembro"""
+class Car(object):
+    condition = "new"
+
+my_car = Car()
+
+print(my_car.condition)
+```
+
+* 18.23
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""inicializando una clase"""
+class Car(object):
+    def __init__(self, model, color, mpg, condition):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+        self.condition = condition
+
+my_car = Car("Toyota Camry", "Red", 24, "New")
+
+print(f"Model: {my_car.model}, Color: {my_car.color}, Condition: {my_car.condition}, Milles per Galon: {my_car.mpg}")
+```
+
+* 18.24
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""agregando métodos a la clase"""
+class Car(object):
+    def __init__(self, model, color, mpg, condition):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+        self.condition = condition
+    
+    def display_car(self):
+        return F"This is a {self.condition} {self.color} {self.model}, able to {self.mpg} Milles per Galon."
+
+my_car = Car("Toyota Camry", "Red", 24, "New")
+
+print(my_car.display_car())
+```
+
+* 18.25
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""cambio de variables miembro"""
+class Car(object):
+    def __init__(self, model, color, mpg, condition):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+        self.condition = condition
+    
+    def display_car(self):
+        return F"This is a {self.condition} {self.color} {self.model}, able to {self.mpg} Milles per Galon."
+    
+    def drive_car(self):
+        self.condition = "Used"
+
+my_car = Car("Toyota Camry", "Red", 24, "New")
+
+print(my_car.condition)
+my_car.drive_car()
+print(my_car.condition)
+```
+
+* 18.26
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""herencia"""
+class Car(object):
+    def __init__(self, model, color, mpg, condition):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+        self.condition = condition
+    
+    def display_car(self):
+        return F"This is a {self.condition} {self.color} {self.model}, able to {self.mpg} Milles per Galon."
+    
+    def drive_car(self):
+        self.condition = "Used"
+
+class EletricCar(Car):
+    def __init__(self, model, color, mpg, condition, battery_type):
+        super(EletricCar, self).__init__(model, color, mpg, condition)
+        self.battery_type = battery_type
+
+my_car = EletricCar("Tesla S", "Blue", 102, "New", "75-100 kWh")
+
+print(my_car.battery_type)
+```
+
+* 18.27
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""Supercrita de métodos"""
+class Car(object):
+    def __init__(self, model, color, mpg, condition):
+        self.model = model
+        self.color = color
+        self.mpg = mpg
+        self.condition = condition
+    
+    def display_car(self):
+        return F"This is a {self.condition} {self.color} {self.model}, able to {self.mpg} Milles per Galon."
+    
+    def drive_car(self):
+        self.condition = "Used"
+
+class EletricCar(Car):
+    def __init__(self, model, color, mpg, condition, battery_type):
+        super(EletricCar, self).__init__(model, color, mpg, condition)
+        self.battery_type = battery_type
+    
+    def drive_car(self):
+        self.condition = "Like new"
+
+my_car = EletricCar("Tesla S", "Blue", 102, "New", "75-100 kWh")
+
+print(my_car.condition)
+my_car.drive_car()
+print(my_car.condition)
+```
+
+* 18.27
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""recapitulando"""
+class Point3D(object):
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __repr__(self):
+        return F"({self.x}, {self.y}, {self.z})"
+
+my_point = Point3D(2, 4, 6)
+print(my_point)
+print(my_point.__repr__())
+```
