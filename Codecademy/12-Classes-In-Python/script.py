@@ -1,28 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""recapitulando"""
+class Point3D(object):
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
 
-class Triangle(object):
-    def __init__(self, angle1, angle2, angle3):
-        self.angle1 = angle1
-        self.angle2 = angle2
-        self.angle3 = angle3
-    
-    number_of_sides = 3
+    def __repr__(self):
+        return F"({self.x}, {self.y}, {self.z})"
 
-    def check_angles(self):
-        if (self.angle1 + self.angle2 + self.angle3) == 180:
-            return True
-        else:
-            return False
-
-my_triangle = Triangle(60, 60, 60)
-print(my_triangle.check_angles())
-print(my_triangle.number_of_sides)
-
-class Equilateral(Triangle):
-    angle = 60
-
-    def __init__(self):
-        self.angle1 = self.angle
-        self.angle2 = self.angle
-        self.angle3 = self.angle
+my_point = Point3D(2, 4, 6)
+print(my_point)
+print(my_point.__repr__())
