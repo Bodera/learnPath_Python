@@ -890,3 +890,125 @@ We are going to semantically classify the movie reviews with a model called Mult
 Before we dig into the classification let's review Bayes' theorem as stated in the equation below:
 
 ![Bayes Theorem](images/bayes_theorem.png)
+
+For our classification, we want to calculate the probability that a given review is negative. Using Bayes' theorem we can find the value of P(neg|"poor review") with:
+
+![Naive Bayes Classifier](images/naive_bayes_classifier.png)
+
+Since we are trying to find out which has the bigger probability, we can discard the denominator and compare:
+
+```
+P("poor review"|neg) X P(neg)
+```
+
+with
+
+```
+P("poor review"|pos) X P(pos)
+```
+
+This will work for the whole review but here comes the Naive part. Since we are comparing feature tokens we naively want to do the same in our classifier. With Bayes' theorem we can rewrite the probability of the review such that:
+
+```
+P("poor review") = P(token1) X P(token2) X P(token3) X ...
+```
+
+Then we can rewrite this as:
+
+```
+P("poor review"|neg) = P(token1|neg) X P(token2|neg) X P(token3|neg) X ...
+```
+
+Thus, we can calculate the sentiment of a review by taking the combined probabilities of the tokens, either being positive or negative, for that review.
+
+### Bag of Words Classification
+
+Now, let's apply what we learned to a feature-engineered bag of words or count vector.
+
+We will start by importing the count vectorizer and a porter stemmer, and then build the vectorizer and analyzer to clean the documents, remove stop words, and stem with:
+
+```python
+from nltk.stem.porter import PorterStemmer
+from sklearn.feature_extraction.text import CountVectorizer
+
+stemmer = PorterStemmer()
+analyzer = CountVectorizer(stop_words='english', token_pattern='[a-zA-Z]{2,}').build_analyzer()
+
+count_vectorizer = CountVectorizer(max_features=5000, analyzer=(lambda text: (stemmer.stem(word) for word in analyzer(text))))
+
+bag_of_words = count_vectorizer.fit_transform(docs)
+bag_of_words[:5].toarray()
+```
+
+Next, we will import the classifier **MultinomialNB** and numpy; then we need ravel up the labels into a 1D array, like so:
+
+```python
+from sklearn.naive_bayes import MultinomialNB
+import numpy as np
+
+train_labels = np.ravel(labels)
+train_labels
+```
+
+Then we can build the bag of words model and train it with a single line, like so:
+
+```python
+bow_model = MultinomialNB().fit(bag_of_words, train_labels)
+```
+
+With the model trained we can look at the score or accuracy with:
+
+```python
+bow_model.score(bag_of_words, train_labels)
+```
+
+This is a percentage value, so a value of .89 equals 89%; not too bad.
+
+We can test the model on some examples with:
+
+```python
+bow_model.predict(bag_of_words[0])
+bow_model.predict(bag_of_words[1001])
+```
+
+Remember, the first review should predict negative and the one-thousand-and-first review should predict positive.
+
+### TF-IDF Classification
+
+The bag of words model worked well, so let's apply this technique now with a TF-IDF feature engineered vector.
+
+We will start by importing the TF-IDF vectorizer, and then build the vectorizer and analyzer to clean the documents, remove stop words, and stem with:
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+analyzer = TfidfVectorizer(stop_words='english', token_pattern='[a-zA-Z]{2,}').build_analyzer()
+
+vectorizer_tfidf = TfidfVectorizer(max_features=5000, analyzer=(lambda text: (stemmer.stem(word) for word in analyzer(text))))
+tfidf = vectorizer_tfidf.fit_transform(docs)
+tfidf.toarray()[:5]
+```
+
+Next, we create and train a new TF-IDF model for classification with:
+
+```python
+tfidf_model = MultinomialNB().fit(tfidf, train_labels)
+tfidf_model.score(tfidf, train_labels)
+```
+
+Not bad. It looks like the score improved just marginally from 89% to 91% or so.
+
+Then can test the model on some examples with:
+
+```python
+tfidf_model.predict(tfidf[0])
+tfidf_model.predict(tfidf[1001])
+```
+
+Remember, the first review should predict negative and the one-thousand-and-first review should predict positive.
+
+### What's Next?
+
+Being able to classify text into two classes has wide applications, from SPAM filtering to document search of pairwise classification. With slightly more advanced methods, we can further enhance this simple classification from two to multiple classes.
+
+Classifying text will provide you with a core process in NLP.
